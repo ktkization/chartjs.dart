@@ -1344,6 +1344,7 @@ abstract class TickOptions implements NestedTickOptions {
   external set minor(dynamic /*NestedTickOptions|false*/ v);
   external dynamic /*MajorTickOptions|false*/ get major;
   external set major(dynamic /*MajorTickOptions|false*/ v);
+  external factory TickOptions();
 }
 
 @anonymous
@@ -1481,12 +1482,15 @@ abstract class LinearTickOptions implements TickOptions {
   external num get suggestedMax;
   @override
   external set suggestedMax(num v);
+  external factory LinearTickOptions();
 }
 
 /// tslint:disable-next-line no-empty-interface
 @anonymous
 @JS()
-abstract class LogarithmicTickOptions implements TickOptions {}
+abstract class LogarithmicTickOptions implements TickOptions {
+  external factory LogarithmicTickOptions();
+}
 
 /*type ChartColor = string | CanvasGradient | CanvasPattern | string[];*/
 typedef T Scriptable<T>(
