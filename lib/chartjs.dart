@@ -39,8 +39,6 @@ import 'package:js/js.dart';
 // TypeScript Version: 2.3
 @JS()
 class Chart {
-  // @Ignore
-  Chart.fakeConstructor$();
   // external static dynamic get Chart;
   external factory Chart(
       dynamic /*String|CanvasRenderingContext2D|CanvasElement|ListLike<CanvasRenderingContext2D|CanvasElement>*/ context,
@@ -134,8 +132,6 @@ class Chart {
 
 @JS()
 class PluginServiceStatic {
-  // @Ignore
-  PluginServiceStatic.fakeConstructor$();
   external void register(
       PluginServiceGlobalRegistration /*PluginServiceGlobalRegistration&PluginServiceRegistrationOptions*/ plugin);
   external void unregister(
