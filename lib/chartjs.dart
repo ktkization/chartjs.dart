@@ -602,7 +602,7 @@ abstract class ChartOptions {
     Function(/*Chart this*/ ChartSize newSize) onResize,
     ChartTitleOptions title,
     ChartLegendOptions legend,
-    ChartTooltipOptions tooltip,
+    ChartTooltipOptions tooltips,
     ChartHoverOptions hover,
     ChartAnimationOptions animation,
     ChartElementsOptions elements,
@@ -863,6 +863,44 @@ abstract class ChartTooltipOptions {
       dynamic /*String|CanvasGradient|CanvasPattern|List<String>*/ v);
   external num get borderWidth;
   external set borderWidth(num v);
+  external factory ChartTooltipOptions({
+    bool enabled,
+    void Function(ChartTooltipModel) custom,
+    String mode,
+    bool intersect,
+    dynamic backgroundColor,
+    String titleAlign,
+    String titleFontFamily,
+    num titleFontSize,
+    String titleFontStyle,
+    dynamic titleFontColor,
+    num titleSpacing,
+    num titleMarginBottom,
+    String bodyAlign,
+    String bodyFontFamily,
+    num bodyFontSize,
+    String bodyFontStyle,
+    dynamic bodyFontColor,
+    num bodySpacing,
+    String footerAlign,
+    String footerFontFamily,
+    num footerFontSize,
+    String footerFontStyle,
+    dynamic footerFontColor,
+    num footerSpacing,
+    num footerMarginTop,
+    num xPadding,
+    num yPadding,
+    num caretSize,
+    num cornerRadius,
+    String multiKeyBackground,
+    ChartTooltipCallback callbacks,
+    String position,
+    num caretPadding,
+    bool displayColors,
+    dynamic borderColor,
+    num borderWidth
+  });
 }
 
 @anonymous
@@ -1740,6 +1778,8 @@ abstract class CommonAxe {
 @anonymous
 @JS()
 abstract class ChartXAxe implements CommonAxe {
+  external num get barPercentage;
+  external set barPercentage(num v);
   external String /*'linear'|'series'*/ get distribution;
   external set distribution(String /*'linear'|'series'*/ v);
   external factory ChartXAxe();
