@@ -863,6 +863,7 @@ abstract class ChartTooltipOptions {
       dynamic /*String|CanvasGradient|CanvasPattern|List<String>*/ v);
   external num get borderWidth;
   external set borderWidth(num v);
+  external factory ChartTooltipOptions();
 }
 
 @anonymous
@@ -1740,6 +1741,8 @@ abstract class CommonAxe {
 @anonymous
 @JS()
 abstract class ChartXAxe implements CommonAxe {
+  external num get barPercentage;
+  external set barPercentage(num v);
   external String /*'linear'|'series'*/ get distribution;
   external set distribution(String /*'linear'|'series'*/ v);
   external factory ChartXAxe();
