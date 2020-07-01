@@ -501,6 +501,21 @@ abstract class ChartTooltipCallback {
       List<ChartTooltipItem> item, ChartData data);
   external dynamic /*String|List<String>*/ afterFooter(
       List<ChartTooltipItem> item, ChartData data);
+  external factory ChartTooltipCallback({
+    beforeTitle: dynamic,
+    title: dynamic,
+    afterTitle: dynamic,
+    beforeBody: dynamic,
+    beforeLabel: dynamic,
+    label: dynamic,
+    labelColor: dynamic,
+    labelTextColor: dynamic,
+    afterLabel: dynamic,
+    afterBody: dynamic,
+    beforeFooter: dynamic,
+    footer: dynamic,
+    afterFooter: dynamic
+  });
 }
 
 @anonymous
