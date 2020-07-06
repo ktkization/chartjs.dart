@@ -501,6 +501,34 @@ abstract class ChartTooltipCallback {
       List<ChartTooltipItem> item, ChartData data);
   external dynamic /*String|List<String>*/ afterFooter(
       List<ChartTooltipItem> item, ChartData data);
+  external factory ChartTooltipCallback({
+      dynamic /*String|List<String>*/ Function(
+          List<ChartTooltipItem> item, ChartData data) beforeTitle,
+      dynamic /*String|List<String>*/ Function(
+          List<ChartTooltipItem> item, ChartData data) title,
+      dynamic /*String|List<String>*/ Function(
+          List<ChartTooltipItem> item, ChartData data) afterTitle,
+      dynamic /*String|List<String>*/ Function(
+          List<ChartTooltipItem> item, ChartData data) beforeBody,
+      dynamic /*String|List<String>*/ Function(
+          ChartTooltipItem tooltipItem, ChartData data) beforeLabel,
+      dynamic /*String|List<String>*/ Function(
+          ChartTooltipItem tooltipItem, ChartData data) label,
+      ChartTooltipLabelColor Function(
+          ChartTooltipItem tooltipItem, Chart chart) labelColor,
+      String Function(
+          ChartTooltipItem tooltipItem, Chart chart) labelTextColor,
+      dynamic /*String|List<String>*/ Function(
+          ChartTooltipItem tooltipItem, ChartData data) afterLabel,
+      dynamic /*String|List<String>*/ Function(
+          List<ChartTooltipItem> item, ChartData data) afterBody,
+      dynamic /*String|List<String>*/ Function(
+          List<ChartTooltipItem> item, ChartData data) beforeFooter,
+      dynamic /*String|List<String>*/ Function(
+          List<ChartTooltipItem> item, ChartData data) footer,
+      dynamic /*String|List<String>*/ Function(
+          List<ChartTooltipItem> item, ChartData data) afterFooter
+  });
 }
 
 @anonymous
